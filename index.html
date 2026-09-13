@@ -4,6 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mind map ôn thi Giải phẫu – Sinh lý</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2213%22%20fill%3D%22%231E2A24%22%2F%3E%3Cg%20stroke%3D%22%238FB79A%22%20stroke-width%3D%223.4%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M27%2032h8%22%2F%3E%3Cpath%20d%3D%22M35%2032v-13h9%22%2F%3E%3Cpath%20d%3D%22M35%2032h9%22%2F%3E%3Cpath%20d%3D%22M35%2032v13h9%22%2F%3E%3C%2Fg%3E%3Crect%20x%3D%229%22%20y%3D%2224%22%20width%3D%2218%22%20height%3D%2216%22%20rx%3D%223.5%22%20fill%3D%22%23F1F3EE%22%2F%3E%3Cg%20fill%3D%22%238FB79A%22%3E%3Crect%20x%3D%2244%22%20y%3D%2215.5%22%20width%3D%2211%22%20height%3D%227%22%20rx%3D%222%22%2F%3E%3Crect%20x%3D%2244%22%20y%3D%2228.5%22%20width%3D%2211%22%20height%3D%227%22%20rx%3D%222%22%2F%3E%3Crect%20x%3D%2244%22%20y%3D%2241.5%22%20width%3D%2211%22%20height%3D%227%22%20rx%3D%222%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2213%22%20fill%3D%22%231E2A24%22%2F%3E%3Cg%20stroke%3D%22%238FB79A%22%20stroke-width%3D%223.4%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M27%2032h8%22%2F%3E%3Cpath%20d%3D%22M35%2032v-13h9%22%2F%3E%3Cpath%20d%3D%22M35%2032h9%22%2F%3E%3Cpath%20d%3D%22M35%2032v13h9%22%2F%3E%3C%2Fg%3E%3Crect%20x%3D%229%22%20y%3D%2224%22%20width%3D%2218%22%20height%3D%2216%22%20rx%3D%223.5%22%20fill%3D%22%23F1F3EE%22%2F%3E%3Cg%20fill%3D%22%238FB79A%22%3E%3Crect%20x%3D%2244%22%20y%3D%2215.5%22%20width%3D%2211%22%20height%3D%227%22%20rx%3D%222%22%2F%3E%3Crect%20x%3D%2244%22%20y%3D%2228.5%22%20width%3D%2211%22%20height%3D%227%22%20rx%3D%222%22%2F%3E%3Crect%20x%3D%2244%22%20y%3D%2241.5%22%20width%3D%2211%22%20height%3D%227%22%20rx%3D%222%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<meta name="theme-color" content="#1E2A24">
+<meta name="description" content="Mind map ôn thi Giải phẫu – Sinh lý: bảy sơ đồ cho bảy câu, kèm hình minh hoạ và bản PDF tải về.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
@@ -41,7 +45,7 @@
 
   .pdf{
     display:inline-flex;align-items:center;gap:8px;
-    margin-top:18px;padding:9px 16px;
+    margin-top:18px;margin-bottom:10px;padding:9px 16px;
     font:inherit;font-size:14px;font-weight:600;
     color:var(--paper);background:var(--ink);
     border:0;border-radius:3px;cursor:pointer;
@@ -50,8 +54,15 @@
   .pdf:hover,.pdf:focus-visible{background:#33463D;outline:none}
   .pdf:focus-visible{box-shadow:0 0 0 3px var(--rule)}
   .pdf svg{width:16px;height:16px;flex:0 0 auto}
+  .pdf.ghost{
+    margin-left:8px;
+    color:var(--ink);background:transparent;
+    box-shadow:inset 0 0 0 1.5px var(--ink);
+  }
+  .pdf.ghost:hover,.pdf.ghost:focus-visible{background:#E4E8E0;color:var(--ink)}
   .pdf-note{
     margin:8px 0 0;font-size:13px;color:var(--muted);
+    
   }
 
   .index{
@@ -139,6 +150,12 @@
   }
   .fig text{font-family:"Be Vietnam Pro",system-ui,Arial,sans-serif}
 
+  /* ---------- khối hình minh hoạ ---------- */
+  .figbox{margin:24px 0 0}
+  .figbox[hidden]{display:none}
+  .figbox .fig{margin:0}
+  .figbox .fig svg{max-width:700px}
+
   .tip{
     margin:20px 0 0;padding:11px 16px;
     background:var(--card);border-left:3px solid var(--accent);
@@ -164,7 +181,7 @@
     .pdf,.pdf-note{display:none}
     .q{break-inside:avoid;page-break-inside:avoid;margin-top:26px}
     .q-head{break-after:avoid;page-break-after:avoid}
-    .branch,.fig,.tip{break-inside:avoid;page-break-inside:avoid}
+    .branch,.fig,.tip,.figbox{break-inside:avoid;page-break-inside:avoid}
     a[href^="#"]{color:inherit;text-decoration:none}
     .core,.q-no,.b-head,.n,.tip{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   }
@@ -184,7 +201,13 @@
       </svg>
       Tải bản PDF để học
     </button>
-    <p class="pdf-note">Bấm nút, rồi ở cửa sổ in chọn <b>“Save as PDF” / “Lưu dưới dạng PDF”</b> là có file mang theo học offline.</p>
+    <button class="pdf ghost" type="button" id="btn-figs" data-state="open" aria-pressed="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle>
+      </svg>
+      <span class="figs-label">Ẩn hình minh hoạ</span>
+    </button>
+    <p class="pdf-note">Bấm <b>Tải bản PDF</b>, rồi ở cửa sổ in chọn <b>“Save as PDF” / “Lưu dưới dạng PDF”</b>. Hình minh hoạ đang <b>hiện</b> thì có trong file PDF, đang <b>ẩn</b> thì không — chọn trước khi tải.</p>
 
     <ul class="index">
       <li style="--accent:#8A6B3D"><a href="#c1"><span class="idx-core">KHỚP</span><span class="idx-q">Câu 1 · Phân loại &amp; khớp động</span></a></li>
@@ -254,6 +277,84 @@
 
       </div>
     </div>
+    <div class="figbox">
+      <figure class="fig">
+        <svg viewBox="0 0 760 448" xmlns="http://www.w3.org/2000/svg" role="img"
+             aria-label="Thiết đồ cắt dọc khớp động: hai đầu xương một lồi một lõm phủ sụn, bao khớp hai lớp xơ và hoạt dịch, ổ khớp chứa dịch, dây chằng phủ ngoài.">
+
+          <!-- dây chằng (ngoài cùng) -->
+          <path d="M418,140 C476,180 480,272 414,308" fill="none" stroke="#A8956A" stroke-width="10" stroke-linecap="round" opacity=".55"/>
+          <path d="M282,142 C228,180 224,268 284,306" fill="none" stroke="#A8956A" stroke-width="10" stroke-linecap="round" opacity=".25"/>
+
+          <!-- bao khớp: lớp xơ -->
+          <path d="M408,152 C452,182 455,258 410,296" fill="none" stroke="var(--accent)" stroke-width="5.5" stroke-linecap="round"/>
+          <path d="M292,152 C248,182 245,258 290,296" fill="none" stroke="var(--accent)" stroke-width="5.5" stroke-linecap="round"/>
+          <!-- bao hoạt dịch -->
+          <path d="M402,163 C438,189 441,251 404,286" fill="none" stroke="#2E7D8C" stroke-width="2.6" stroke-dasharray="6 4"/>
+          <path d="M298,163 C262,189 259,251 296,286" fill="none" stroke="#2E7D8C" stroke-width="2.6" stroke-dasharray="6 4"/>
+
+          <!-- ổ khớp -->
+          <path d="M285,192 A65,52 0 0,0 415,192 L425,202 A75,50 0 0,1 275,202 Z" fill="#CBE0E6"/>
+
+          <!-- xương trên (lồi) -->
+          <path d="M312,25 L312,132 C312,162 285,160 285,192 A65,52 0 0,0 415,192 C415,160 388,162 388,132 L388,25 Z"
+                fill="#EFE9DC" stroke="#B5A88E" stroke-width="2"/>
+          <!-- xương dưới (lõm) -->
+          <path d="M312,410 L312,302 C312,268 275,262 275,202 A75,50 0 0,0 425,202 C425,262 388,268 388,302 L388,410 Z"
+                fill="#EFE9DC" stroke="#B5A88E" stroke-width="2"/>
+
+          <!-- sụn khớp -->
+          <path d="M285,192 A65,52 0 0,0 415,192" fill="none" stroke="#8FC0C9" stroke-width="7" stroke-linecap="round"/>
+          <path d="M275,202 A75,50 0 0,0 425,202" fill="none" stroke="#8FC0C9" stroke-width="7" stroke-linecap="round"/>
+
+          <!-- chỉ dẫn trái -->
+          <g stroke="#8B8F86" stroke-width="1.2" fill="none">
+            <path d="M214,196 L286,199"/>
+            <path d="M214,300 L330,248"/>
+            <path d="M214,70 L310,70"/>
+          </g>
+          <g text-anchor="end" font-size="14">
+            <text x="206" y="66" fill="#6B7A70">Đầu xương</text>
+
+            <text x="206" y="193" font-weight="700" fill="var(--accent)">① MẶT KHỚP</text>
+            <text x="206" y="211" font-size="12.5" fill="#3D4A43">phủ một lớp sụn</text>
+            <text x="206" y="227" font-size="12.5" fill="#3D4A43">thường 1 lồi – 1 lõm</text>
+
+            <text x="206" y="297" font-weight="700" fill="var(--accent)">③ Ổ KHỚP</text>
+            <text x="206" y="315" font-size="12.5" fill="#3D4A43">khe giữa bao khớp và sụn</text>
+            <text x="206" y="331" font-size="12.5" fill="#3D4A43">chứa dịch → giảm ma sát</text>
+          </g>
+
+          <!-- chỉ dẫn phải -->
+          <g stroke="#8B8F86" stroke-width="1.2" fill="none">
+            <path d="M486,150 L470,186"/>
+            <path d="M486,232 L452,224"/>
+            <path d="M486,262 L438,240"/>
+          </g>
+          <g text-anchor="start" font-size="14">
+            <text x="494" y="140" font-weight="700" fill="#8A7A4E">DÂY CHẰNG</text>
+            <text x="494" y="158" font-size="12.5" fill="#3D4A43">tăng cường phía ngoài bao khớp</text>
+
+            <text x="494" y="212" font-weight="700" fill="var(--accent)">② BAO KHỚP</text>
+            <text x="494" y="236" font-size="12.5" fill="var(--accent)">─ lớp xơ (ngoài)</text>
+            <text x="494" y="266" font-size="12.5" fill="#2E7D8C">╌ bao hoạt dịch (trong)</text>
+            <text x="494" y="288" font-size="12.5" fill="#6B7A70">nối hai đầu xương, tiết dịch</text>
+          </g>
+
+          <!-- sụn chú thích -->
+          <g>
+            <path d="M496,368 L526,368" stroke="#8FC0C9" stroke-width="7" stroke-linecap="round"/>
+            <text x="536" y="373" font-size="12.5" fill="#3D4A43">sụn khớp</text>
+            <rect x="104" y="361" width="30" height="14" fill="#CBE0E6"/>
+            <text x="144" y="373" font-size="12.5" fill="#3D4A43">dịch ổ khớp</text>
+          </g>
+
+          <text x="350" y="432" text-anchor="middle" font-size="13.5" font-weight="700" fill="var(--accent)">3 PHẦN: MẶT – BAO – Ổ</text>
+        </svg>
+        <figcaption>Cắt dọc một khớp động. Đọc từ trong ra ngoài: hai <b>mặt khớp</b> phủ sụn (1 lồi – 1 lõm) → khe <b>ổ khớp</b> chứa dịch → <b>bao khớp</b> hai lớp (xơ ngoài, hoạt dịch trong) → <b>dây chằng</b> bọc ngoài cùng.</figcaption>
+      </figure>
+    </div>
+
     <p class="tip"><b>Mẹo:</b> ba loại khớp đi theo “sọ – sống – tay chân”; khớp động đi theo “mặt – bao – ổ”, và riêng bao khớp nhớ từ ngoài vào trong: xơ → hoạt dịch → dây chằng phủ ngoài.</p>
   </section>
 
@@ -315,6 +416,89 @@
 
       </div>
     </div>
+    <div class="figbox">
+      <figure class="fig">
+        <svg viewBox="0 0 760 470" xmlns="http://www.w3.org/2000/svg" role="img"
+             aria-label="So sánh mặt trước và mặt dưới của tim: mặt trước rãnh ngang đi với vành phải, rãnh dọc đi với vành trái; mặt dưới đảo ngược.">
+
+          <text x="156" y="34" text-anchor="middle" font-size="15" font-weight="700" fill="var(--accent)">MẶT TRƯỚC</text>
+          <text x="156" y="52" text-anchor="middle" font-size="12.5" fill="#6B7A70">mặt ức sườn</text>
+          <text x="604" y="34" text-anchor="middle" font-size="15" font-weight="700" fill="var(--accent)">MẶT DƯỚI</text>
+          <text x="604" y="52" text-anchor="middle" font-size="12.5" fill="#6B7A70">mặt hoành — đè lên cơ hoành</text>
+
+          <g transform="translate(58,90)">
+            <!-- tiểu nhĩ -->
+            <path d="M34,54 C16,42 20,14 44,18 C62,22 66,44 58,56 Z" fill="#EFCFCC" stroke="#B4232A" stroke-width="2"/>
+            <path d="M170,42 C190,32 202,52 188,66 C176,78 158,68 159,54 Z" fill="#EFCFCC" stroke="#B4232A" stroke-width="2"/>
+            <!-- động mạch lớn -->
+            <rect x="88" y="-30" width="27" height="62" rx="13" transform="rotate(-10 101 1)" fill="#E9E2D4" stroke="#9B8F76" stroke-width="2"/>
+            <rect x="122" y="-34" width="27" height="66" rx="13" transform="rotate(8 135 -1)" fill="#DCE6EC" stroke="#63808E" stroke-width="2"/>
+            <path d="M28,78 C28,30 92,10 148,26 C192,39 200,88 194,138 C186,200 152,246 110,272 C58,238 28,162 28,78 Z"
+                  fill="#F4DCDA" stroke="#B4232A" stroke-width="2.5" stroke-linejoin="round"/>
+            <!-- rãnh ngang -->
+            <path d="M31,124 C72,148 142,142 193,112" fill="none" stroke="#B4232A" stroke-width="6" stroke-linecap="round"/>
+            <!-- rãnh dọc -->
+            <path d="M95,142 C104,192 108,242 110,270" fill="none" stroke="#1F6F8C" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="110" cy="271" r="5" fill="#1E2A24"/>
+          </g>
+          <g transform="translate(702,90) scale(-1,1)">
+            <!-- tiểu nhĩ -->
+            <path d="M34,54 C16,42 20,14 44,18 C62,22 66,44 58,56 Z" fill="#EFCFCC" stroke="#B4232A" stroke-width="2"/>
+            <path d="M170,42 C190,32 202,52 188,66 C176,78 158,68 159,54 Z" fill="#EFCFCC" stroke="#B4232A" stroke-width="2"/>
+            <!-- động mạch lớn -->
+            <rect x="88" y="-30" width="27" height="62" rx="13" transform="rotate(-10 101 1)" fill="#E9E2D4" stroke="#9B8F76" stroke-width="2"/>
+            <rect x="122" y="-34" width="27" height="66" rx="13" transform="rotate(8 135 -1)" fill="#DCE6EC" stroke="#63808E" stroke-width="2"/>
+            <path d="M28,78 C28,30 92,10 148,26 C192,39 200,88 194,138 C186,200 152,246 110,272 C58,238 28,162 28,78 Z"
+                  fill="#F4DCDA" stroke="#B4232A" stroke-width="2.5" stroke-linejoin="round"/>
+            <!-- rãnh ngang -->
+            <path d="M31,124 C72,148 142,142 193,112" fill="none" stroke="#1F6F8C" stroke-width="6" stroke-linecap="round"/>
+            <!-- rãnh dọc -->
+            <path d="M95,142 C104,192 108,242 110,270" fill="none" stroke="#B4232A" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="110" cy="271" r="5" fill="#1E2A24"/>
+          </g>
+
+          <!-- vách giữa + huy hiệu đảo ngược -->
+          <path d="M380,80 L380,330" stroke="#C6CDC2" stroke-width="1.5" stroke-dasharray="6 6"/>
+          <g transform="translate(380,196)">
+            <rect x="-54" y="-30" width="108" height="60" rx="4" fill="#FBFCFA" stroke="var(--accent)" stroke-width="1.5"/>
+            <text x="0" y="-4" text-anchor="middle" font-size="22" font-weight="700" fill="var(--accent)">⇄</text>
+            <text x="0" y="18" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--accent)">ĐẢO NGƯỢC</text>
+          </g>
+
+          <!-- chú giải panel trái -->
+          <g transform="translate(22,376)" font-size="13">
+            <path d="M0,-4 L26,-4" stroke="#B4232A" stroke-width="6" stroke-linecap="round"/>
+            <text x="36" y="1" fill="#3D4A43">Rãnh <tspan font-weight="600">ngang</tspan> (liên nhĩ thất trước) → vành <tspan font-weight="700" fill="#B4232A">PHẢI</tspan></text>
+            <path d="M0,26 L26,26" stroke="#1F6F8C" stroke-width="6" stroke-linecap="round"/>
+            <text x="36" y="31" fill="#3D4A43">Rãnh <tspan font-weight="600">dọc</tspan> (liên thất trước) → vành <tspan font-weight="700" fill="#1F6F8C">TRÁI</tspan></text>
+          </g>
+          <!-- chú giải panel phải -->
+          <g transform="translate(408,376)" font-size="13">
+            <path d="M0,-4 L26,-4" stroke="#1F6F8C" stroke-width="6" stroke-linecap="round"/>
+            <text x="36" y="1" fill="#3D4A43">Rãnh <tspan font-weight="600">ngang</tspan> (liên nhĩ thất sau) → vành <tspan font-weight="700" fill="#1F6F8C">TRÁI</tspan></text>
+            <path d="M0,26 L26,26" stroke="#B4232A" stroke-width="6" stroke-linecap="round"/>
+            <text x="36" y="31" fill="#3D4A43">Rãnh <tspan font-weight="600">dọc</tspan> (liên thất sau) → vành <tspan font-weight="700" fill="#B4232A">PHẢI</tspan></text>
+          </g>
+
+          <!-- chú thích thêm -->
+          <g font-size="12.5" fill="#6B7A70">
+            <path d="M168,362 L168,300" stroke="#8B8F86" stroke-width="1.2" fill="none"/>
+            <text x="22" y="442">● Đỉnh (mỏm tim): quay xuống dưới — khoang liên sườn V, đường giữa đòn trái.</text>
+            <text x="22" y="460">● Nền (đáy tim): mặt sau hai tâm nhĩ, hướng lên trên – ra sau – sang phải. Mặt trái áp sát phổi.</text>
+          </g>
+
+          <!-- nhãn động mạch + tiểu nhĩ (panel trái) -->
+          <g font-size="12" fill="#6B7A70">
+            <path d="M262,108 L250,130" stroke="#8B8F86" stroke-width="1.1" fill="none"/>
+            <text x="266" y="112">hai tiểu nhĩ</text>
+            <path d="M262,66 L208,76" stroke="#8B8F86" stroke-width="1.1" fill="none"/>
+            <text x="266" y="70">ĐM chủ + ĐM phổi</text>
+          </g>
+        </svg>
+        <figcaption>Hai mặt đứng cạnh nhau cho thấy điểm dễ lẫn nhất: <b>màu đỏ = vành phải, màu xanh = vành trái</b>. Sang mặt dưới, hai màu đổi chỗ cho nhau.</figcaption>
+      </figure>
+    </div>
+
     <p class="tip"><b>Chỗ dễ lẫn nhất:</b> mặt trước — rãnh ngang đi với vành <b>phải</b>, rãnh dọc đi với vành <b>trái</b>. Xuống mặt dưới thì <b>đảo ngược</b> cả hai.</p>
   </section>
 
@@ -414,6 +598,100 @@
 
       </div>
     </div>
+    <div class="figbox">
+      <figure class="fig">
+        <svg viewBox="0 0 760 380" xmlns="http://www.w3.org/2000/svg" role="img"
+             aria-label="Bảng bốn nhóm máu: O không có kháng nguyên nhưng huyết tương có alpha và beta; A có kháng nguyên A và kháng thể beta; B có kháng nguyên B và kháng thể alpha; AB có cả hai kháng nguyên và không có kháng thể.">
+
+          <g text-anchor="end" font-size="13">
+            <text x="164" y="42" font-weight="700" fill="var(--accent)">Nhóm máu</text>
+            <text x="164" y="104" font-weight="600" fill="#3D4A43">Kháng nguyên</text>
+            <text x="164" y="121" font-size="12" fill="#6B7A70">trên hồng cầu</text>
+            <text x="164" y="194" font-weight="600" fill="#3D4A43">Kháng thể</text>
+            <text x="164" y="211" font-size="12" fill="#6B7A70">trong huyết tương</text>
+            <text x="164" y="264" font-weight="600" fill="#3D4A43">Tóm tắt</text>
+          </g>
+
+          <g transform="translate(248,0)">
+            <rect x="-70" y="18" width="140" height="290" rx="4" fill="#FBFCFA" stroke="var(--rule)" stroke-width="1.5"/>
+            <rect x="-70" y="18" width="140" height="34" rx="4" fill="var(--accent)"/>
+            <rect x="-70" y="44" width="140" height="8" fill="var(--accent)"/>
+            <text x="0" y="42" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">O</text>
+            <circle cx="0" cy="108" r="30" fill="#EFC9C6" stroke="#B4232A" stroke-width="2"/>
+            <circle cx="0" cy="108" r="13" fill="#E2AFAC"/>
+            <text x="0" y="156" text-anchor="middle" font-size="12.5" fill="#6B7A70">không có KN</text>
+            <rect x="-56" y="176" width="112" height="44" rx="22" fill="#E7EFE9" stroke="#9BB0A4" stroke-width="1.5"/>
+            <text x="0" y="205" text-anchor="middle" font-size="16" font-weight="700" fill="#3D4A43">α + β</text>
+            <path d="M-52,238 L52,238" stroke="var(--rule)" stroke-width="1.5"/>
+            <text x="0" y="264" text-anchor="middle" font-size="12.5" fill="#3D4A43">cho được <tspan font-weight="700">tất cả</tspan></text>
+            <text x="0" y="284" text-anchor="middle" font-size="12.5" fill="#3D4A43">chỉ nhận của O</text>
+          </g>
+          <g transform="translate(394,0)">
+            <rect x="-70" y="18" width="140" height="290" rx="4" fill="#FBFCFA" stroke="var(--rule)" stroke-width="1.5"/>
+            <rect x="-70" y="18" width="140" height="34" rx="4" fill="var(--accent)"/>
+            <rect x="-70" y="44" width="140" height="8" fill="var(--accent)"/>
+            <text x="0" y="42" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">A</text>
+            <circle cx="0" cy="108" r="30" fill="#EFC9C6" stroke="#B4232A" stroke-width="2"/>
+            <circle cx="0" cy="108" r="13" fill="#E2AFAC"/>
+            <path d="M-30,82 l-8,7 h16 z" fill="#B4232A"/>
+            <path d="M30,82 l-8,7 h16 z" fill="#B4232A"/>
+            <path d="M-30,122 l-8,7 h16 z" fill="#B4232A"/>
+            <text x="0" y="156" text-anchor="middle" font-size="12.5" fill="#6B7A70">KN <tspan fill="#B4232A" font-weight="700">A</tspan></text>
+            <rect x="-56" y="176" width="112" height="44" rx="22" fill="#E7EFE9" stroke="#9BB0A4" stroke-width="1.5"/>
+            <text x="0" y="205" text-anchor="middle" font-size="16" font-weight="700" fill="#3D4A43">β</text>
+            <path d="M-52,238 L52,238" stroke="var(--rule)" stroke-width="1.5"/>
+            <text x="0" y="264" text-anchor="middle" font-size="12.5" fill="#3D4A43">cho A, AB</text>
+            <text x="0" y="284" text-anchor="middle" font-size="12.5" fill="#3D4A43">nhận A, O</text>
+          </g>
+          <g transform="translate(540,0)">
+            <rect x="-70" y="18" width="140" height="290" rx="4" fill="#FBFCFA" stroke="var(--rule)" stroke-width="1.5"/>
+            <rect x="-70" y="18" width="140" height="34" rx="4" fill="var(--accent)"/>
+            <rect x="-70" y="44" width="140" height="8" fill="var(--accent)"/>
+            <text x="0" y="42" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">B</text>
+            <circle cx="0" cy="108" r="30" fill="#EFC9C6" stroke="#B4232A" stroke-width="2"/>
+            <circle cx="0" cy="108" r="13" fill="#E2AFAC"/>
+            <rect x="-36" y="82" width="13" height="13" fill="#1F6F8C"/>
+            <rect x="24" y="82" width="13" height="13" fill="#1F6F8C"/>
+            <rect x="-36" y="122" width="13" height="13" fill="#1F6F8C"/>
+            <text x="0" y="156" text-anchor="middle" font-size="12.5" fill="#6B7A70">KN <tspan fill="#1F6F8C" font-weight="700">B</tspan></text>
+            <rect x="-56" y="176" width="112" height="44" rx="22" fill="#E7EFE9" stroke="#9BB0A4" stroke-width="1.5"/>
+            <text x="0" y="205" text-anchor="middle" font-size="16" font-weight="700" fill="#3D4A43">α</text>
+            <path d="M-52,238 L52,238" stroke="var(--rule)" stroke-width="1.5"/>
+            <text x="0" y="264" text-anchor="middle" font-size="12.5" fill="#3D4A43">cho B, AB</text>
+            <text x="0" y="284" text-anchor="middle" font-size="12.5" fill="#3D4A43">nhận B, O</text>
+          </g>
+          <g transform="translate(686,0)">
+            <rect x="-70" y="18" width="140" height="290" rx="4" fill="#FBFCFA" stroke="var(--rule)" stroke-width="1.5"/>
+            <rect x="-70" y="18" width="140" height="34" rx="4" fill="var(--accent)"/>
+            <rect x="-70" y="44" width="140" height="8" fill="var(--accent)"/>
+            <text x="0" y="42" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">AB</text>
+            <circle cx="0" cy="108" r="30" fill="#EFC9C6" stroke="#B4232A" stroke-width="2"/>
+            <circle cx="0" cy="108" r="13" fill="#E2AFAC"/>
+            <path d="M-30,82 l-8,7 h16 z" fill="#B4232A"/>
+            <path d="M30,82 l-8,7 h16 z" fill="#B4232A"/>
+            <rect x="-36" y="122" width="13" height="13" fill="#1F6F8C"/>
+            <rect x="24" y="122" width="13" height="13" fill="#1F6F8C"/>
+            <text x="0" y="156" text-anchor="middle" font-size="12.5" fill="#6B7A70">KN <tspan fill="#B4232A" font-weight="700">A</tspan> + <tspan fill="#1F6F8C" font-weight="700">B</tspan></text>
+            <rect x="-56" y="176" width="112" height="44" rx="22" fill="#E7EFE9" stroke="#9BB0A4" stroke-width="1.5"/>
+            <text x="0" y="205" text-anchor="middle" font-size="16" font-weight="700" fill="#3D4A43">không có</text>
+            <path d="M-52,238 L52,238" stroke="var(--rule)" stroke-width="1.5"/>
+            <text x="0" y="264" text-anchor="middle" font-size="12.5" fill="#3D4A43">chỉ cho AB</text>
+            <text x="0" y="284" text-anchor="middle" font-size="12.5" fill="#3D4A43">nhận <tspan font-weight="700">tất cả</tspan></text>
+          </g>
+
+          <g transform="translate(20,344)" font-size="12.5">
+            <path d="M4,-4 l-7,6 h14 z" fill="#B4232A"/>
+            <text x="20" y="0" fill="#6B7A70">kháng nguyên A</text>
+            <rect x="140" y="-10" width="12" height="12" fill="#1F6F8C"/>
+            <text x="160" y="0" fill="#6B7A70">kháng nguyên B</text>
+            <text x="292" y="0" fill="#6B7A70"><tspan font-weight="700" fill="#3D4A43">α</tspan> = kháng thể chống A · <tspan font-weight="700" fill="#3D4A43">β</tspan> = kháng thể chống B</text>
+          </g>
+          <text x="20" y="372" font-size="12.5" fill="var(--accent)" font-weight="600">Nguyên tắc: KN của người CHO không được gặp KT cùng tên trong huyết tương người NHẬN → A gặp α, B gặp β là vón.</text>
+        </svg>
+        <figcaption>Đây là <b>gốc</b> của sơ đồ trên: O không mang kháng nguyên nên cho được mọi người; AB không mang kháng thể nên nhận được của mọi người.</figcaption>
+      </figure>
+    </div>
+
     <p class="tip"><b>Một câu gói cả sơ đồ:</b> O cho được tất cả, AB nhận được tất cả — mũi tên trong sơ đồ luôn chạy từ O ra ngoài và từ ngoài dồn về AB.</p>
   </section>
 
@@ -497,6 +775,84 @@
 
       </div>
     </div>
+    <div class="figbox">
+      <figure class="fig">
+        <svg viewBox="0 -36 760 576" xmlns="http://www.w3.org/2000/svg" role="img"
+             aria-label="Thở vào: cơ hoành hạ xuống, lồng ngực nở, áp suất trong phổi thấp hơn bên ngoài nên khí bị hút vào. Thở ra ngược lại. Thanh dưới chia dung tích phổi.">
+          <defs>
+            <marker id="ar4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1D6F7A"/></marker>
+              <marker id="ar4r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B4232A"/></marker>
+          </defs>
+
+          <text x="190" y="-12" text-anchor="middle" font-size="15" font-weight="700" fill="var(--accent)">THỞ VÀO</text>
+          <text x="570" y="-12" text-anchor="middle" font-size="15" font-weight="700" fill="var(--accent)">THỞ RA</text>
+
+          <g>
+            <path d="M104,86 C104,74 276,74 276,86 L290,252 C290,270 90,270 90,252 Z" fill="#EAF0EE" stroke="#5C7B84" stroke-width="2.5" stroke-linejoin="round"/>
+            <rect x="178" y="26" width="24" height="56" rx="6" fill="#E4EAE6" stroke="#5C7B84" stroke-width="2"/>
+            <path d="M190,82 L150,132 M190,82 L230,132" stroke="#5C7B84" stroke-width="4" stroke-linecap="round" fill="none"/>
+            <ellipse cx="146" cy="182" rx="36" ry="64" fill="#CFE3E6" stroke="#2E7D8C" stroke-width="2.5"/>
+            <ellipse cx="234" cy="182" rx="36" ry="64" fill="#CFE3E6" stroke="#2E7D8C" stroke-width="2.5"/>
+            <path d="M91,250 C140,238 240,238 289,250" fill="none" stroke="#B4232A" stroke-width="5" stroke-linecap="round"/>
+          </g>
+          <g transform="translate(380,0)">
+            <path d="M116,90 C116,80 264,80 264,90 L276,248 C276,264 104,264 104,248 Z" fill="#EAF0EE" stroke="#5C7B84" stroke-width="2.5" stroke-linejoin="round"/>
+            <rect x="178" y="26" width="24" height="56" rx="6" fill="#E4EAE6" stroke="#5C7B84" stroke-width="2"/>
+            <path d="M190,82 L158,136 M190,82 L222,136" stroke="#5C7B84" stroke-width="4" stroke-linecap="round" fill="none"/>
+            <ellipse cx="154" cy="172" rx="28" ry="50" fill="#CFE3E6" stroke="#2E7D8C" stroke-width="2.5"/>
+            <ellipse cx="226" cy="172" rx="28" ry="50" fill="#CFE3E6" stroke="#2E7D8C" stroke-width="2.5"/>
+            <path d="M105,244 C142,192 238,192 275,244" fill="none" stroke="#B4232A" stroke-width="5" stroke-linecap="round"/>
+          </g>
+
+          <!-- mui ten thở vào -->
+          <g stroke="#1D6F7A" stroke-width="3" fill="none" marker-end="url(#ar4)">
+            <path d="M190,2 L190,24"/>
+            <path d="M96,168 L64,168"/>
+            <path d="M284,168 L316,168"/>
+          </g>
+          <path d="M190,268 L190,296" stroke="#B4232A" stroke-width="3" fill="none" marker-end="url(#ar4r)"/>
+          <!-- mui ten thở ra -->
+          <g stroke="#1D6F7A" stroke-width="3" fill="none" marker-end="url(#ar4)">
+            <path d="M570,24 L570,2"/>
+            <path d="M428,168 L452,168"/>
+            <path d="M712,168 L688,168"/>
+          </g>
+          <path d="M570,300 L570,268" stroke="#B4232A" stroke-width="3" fill="none" marker-end="url(#ar4r)"/>
+
+          <g font-size="13" text-anchor="middle">
+            <text x="190" y="314" font-weight="700" fill="#B4232A">cơ hoành HẠ XUỐNG</text>
+            <text x="190" y="333" fill="#3D4A43">cơ hô hấp <tspan font-weight="600">co</tspan> · lồng ngực nở <tspan font-weight="600">3 chiều</tspan></text>
+            <text x="190" y="351" font-size="12.5" fill="#6B7A70">ngang – dọc – trước sau</text>
+            <text x="190" y="374" font-weight="700" fill="#1D6F7A">P phổi &lt; P ngoài → khí bị HÚT VÀO</text>
+
+            <text x="570" y="314" font-weight="700" fill="#B4232A">cơ hoành NÂNG LÊN</text>
+            <text x="570" y="333" fill="#3D4A43">cơ hô hấp <tspan font-weight="600">giãn</tspan> · lồng ngực thu lại</text>
+            <text x="570" y="351" font-size="12.5" fill="#6B7A70">thể tích phổi giảm</text>
+            <text x="570" y="374" font-weight="700" fill="#1D6F7A">P phổi &gt; P ngoài → khí bị ĐẨY RA</text>
+          </g>
+
+          <path d="M20,394 L740,394" stroke="var(--rule)" stroke-width="1.5"/>
+          <rect x="40" y="430" width="210" height="42" fill="#A8CBD2" stroke="#FBFCFA" stroke-width="2"/>
+          <text x="145" y="448" text-anchor="middle" font-size="12.5" fill="#1E2A24">Dự trữ hít vào</text>
+          <text x="145" y="465" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1E2A24">1,5 L</text>
+          <rect x="250" y="430" width="70" height="42" fill="#1D6F7A" stroke="#FBFCFA" stroke-width="2"/>
+          <text x="285" y="448" text-anchor="middle" font-size="10.5" fill="#fff">Lưu thông</text>
+          <text x="285" y="465" text-anchor="middle" font-size="13.5" font-weight="700" fill="#fff">0,5 L</text>
+          <rect x="320" y="430" width="210" height="42" fill="#A8CBD2" stroke="#FBFCFA" stroke-width="2"/>
+          <text x="425" y="448" text-anchor="middle" font-size="12.5" fill="#1E2A24">Dự trữ thở ra</text>
+          <text x="425" y="465" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1E2A24">1,5 L</text>
+          <rect x="530" y="430" width="175" height="42" fill="#C9CFC6" stroke="#FBFCFA" stroke-width="2"/>
+          <text x="618" y="448" text-anchor="middle" font-size="12.5" fill="#1E2A24">Khí cặn</text>
+          <text x="618" y="465" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1E2A24">1 – 1,5 L</text>
+          <path d="M40,420 L40,410 L530,410 L530,420" fill="none" stroke="var(--accent)" stroke-width="1.8"/>
+          <text x="285" y="402" text-anchor="middle" font-size="13.5" font-weight="700" fill="var(--accent)">DUNG TÍCH SỐNG ≈ 3,5 L  (0,5 + 1,5 + 1,5)</text>
+          <path d="M40,482 L40,492 L705,492 L705,482" fill="none" stroke="#6B7A70" stroke-width="1.5"/>
+          <text x="372" y="510" text-anchor="middle" font-size="13" fill="#3D4A43">Dung lượng phổi toàn bộ <tspan font-weight="700">4,5 – 5 L</tspan></text>
+        </svg>
+        <figcaption>Một chu kỳ thở = 1 lần hít vào + 1 lần thở ra. Đường đỏ là <b>cơ hoành</b> — hạ xuống thì khí vào, nâng lên thì khí ra. Thanh dưới cộng lại đúng 0,5 + 1,5 + 1,5 = 3,5 L.</figcaption>
+      </figure>
+    </div>
+
     <p class="tip"><b>Hai chuỗi số phải thuộc lòng:</b> ngưỡng viêm phổi tụt dần 60 – 50 – 40 theo tuổi lớn dần; thể tích phổi cộng lại 0,5 + 1,5 + 1,5 = 3,5.</p>
   </section>
 
@@ -557,6 +913,106 @@
 
       </div>
     </div>
+    <div class="figbox">
+      <figure class="fig">
+        <svg viewBox="0 0 760 470" xmlns="http://www.w3.org/2000/svg" role="img"
+             aria-label="Dạ dày hình chữ J: trên nối thực quản qua lỗ tâm vị, phần đứng gồm đáy vị và thân vị, phần nằm gồm hang vị và môn vị, dưới nối tá tràng.">
+
+          <!-- thực quản -->
+          <path d="M230,28 L230,120 L268,124 L268,28 Z" fill="#EDE4D6" stroke="#9B8F76" stroke-width="2"/>
+          <!-- tá tràng -->
+          <path d="M376,286 C408,272 434,290 436,318 C438,348 422,372 398,378"
+                fill="none" stroke="#9B8F76" stroke-width="20" stroke-linecap="round" opacity=".35"/>
+
+          <!-- dạ dày -->
+          <path d="M228,118 C214,86 166,72 146,112 C128,142 132,172 134,202
+                   C138,268 158,332 216,364 C276,394 348,374 378,324
+                   L380,300 L372,292
+                   C340,308 288,308 258,284 C232,264 226,224 226,176
+                   C226,146 226,128 228,118 Z"
+                fill="#F4E2CC" stroke="var(--accent)" stroke-width="2.8" stroke-linejoin="round"/>
+
+          <!-- ranh giới các vùng -->
+          <g stroke="#B98B4B" stroke-width="1.6" stroke-dasharray="6 5" fill="none">
+            <path d="M138,148 L227,140"/>
+            <path d="M252,282 L186,330"/>
+            <path d="M352,340 L344,290"/>
+          </g>
+
+          <!-- lỗ tâm vị / môn vị -->
+          <path d="M228,120 L268,124" stroke="var(--accent)" stroke-width="5" stroke-linecap="round"/>
+          <path d="M372,292 L380,300" stroke="var(--accent)" stroke-width="5" stroke-linecap="round"/>
+
+          <!-- nhãn trong hình -->
+          <g text-anchor="middle" font-size="13" font-weight="600" fill="#8A5A16">
+            <text x="176" y="112">Đáy vị</text>
+            <text x="176" y="128" font-size="11.5" font-weight="400" fill="#A07A45">(phình vị)</text>
+            <text x="180" y="238">Thân vị</text>
+            <text x="288" y="344">Hang vị</text>
+            <text x="352" y="392" font-size="12">Môn vị</text>
+          </g>
+
+          <!-- ngoặc phần đứng / phần nằm -->
+          <path d="M112,96 L100,96 L100,290 L112,290" fill="none" stroke="var(--accent)" stroke-width="1.8"/>
+          <text x="92" y="188" text-anchor="end" font-size="13.5" font-weight="700" fill="var(--accent)">PHẦN</text>
+          <text x="92" y="206" text-anchor="end" font-size="13.5" font-weight="700" fill="var(--accent)">ĐỨNG</text>
+          <path d="M214,398 L214,410 L392,410 L392,398" fill="none" stroke="var(--accent)" stroke-width="1.8"/>
+          <text x="303" y="432" text-anchor="middle" font-size="13.5" font-weight="700" fill="var(--accent)">PHẦN NẰM</text>
+
+          <!-- chỉ dẫn -->
+          <g stroke="#8B8F86" stroke-width="1.2" fill="none">
+            <path d="M284,52 L270,52"/>
+            <path d="M292,122 L272,122"/>
+            <path d="M292,196 L230,192"/>
+            <path d="M122,282 L138,272"/>
+            <path d="M398,262 L380,288"/>
+            <path d="M452,362 L420,356"/>
+          </g>
+          <g font-size="13">
+            <text x="290" y="56" fill="#6B7A70">Thực quản</text>
+            <text x="298" y="118" font-weight="700" fill="var(--accent)">LỖ TÂM VỊ</text>
+            <text x="298" y="135" font-size="12" fill="#6B7A70">ở trên</text>
+            <text x="298" y="192" font-weight="600" fill="#3D4A43">Bờ cong nhỏ</text>
+            <text x="298" y="209" font-size="12" fill="#6B7A70">→ mạc nối nhỏ</text>
+            <text x="114" y="272" text-anchor="end" font-weight="600" fill="#3D4A43">Bờ cong lớn</text>
+            <text x="114" y="289" text-anchor="end" font-size="12" fill="#6B7A70">→ mạc nối lớn</text>
+            <text x="404" y="252" font-weight="700" fill="var(--accent)">LỖ MÔN VỊ</text>
+            <text x="404" y="269" font-size="12" fill="#6B7A70">ở dưới</text>
+            <text x="458" y="366" fill="#6B7A70">Tá tràng</text>
+          </g>
+
+          <!-- bảng "toàn số 2" -->
+          <g transform="translate(500,70)">
+            <rect x="0" y="0" width="248" height="176" rx="4" fill="#FBFCFA" stroke="var(--accent)" stroke-width="1.5"/>
+            <rect x="0" y="0" width="248" height="32" rx="4" fill="var(--accent)"/>
+            <rect x="0" y="24" width="248" height="8" fill="var(--accent)"/>
+            <text x="124" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">CƠ QUAN “TOÀN SỐ 2”</text>
+            <g font-size="13">
+              <text x="16" y="60" font-weight="700" fill="var(--accent)">2 mặt</text>
+              <text x="78" y="60" fill="#3D4A43">trước · sau</text>
+              <text x="16" y="86" font-weight="700" fill="var(--accent)">2 bờ</text>
+              <text x="78" y="86" fill="#3D4A43">cong nhỏ · cong lớn</text>
+              <text x="16" y="112" font-weight="700" fill="var(--accent)">2 lỗ</text>
+              <text x="78" y="112" fill="#3D4A43">tâm vị · môn vị</text>
+              <path d="M16,130 L232,130" stroke="var(--rule)" stroke-width="1.3"/>
+              <text x="16" y="152" font-size="12.5" fill="#6B7A70">Dài 25–30 cm · rộng 10–15 cm</text>
+              <text x="16" y="170" font-size="12.5" fill="#6B7A70">Chứa 1–2 lít · vùng thượng vị</text>
+            </g>
+          </g>
+
+          <!-- liên quan hai mặt -->
+          <g transform="translate(500,272)" font-size="12.5">
+            <text x="0" y="0" font-weight="700" fill="#3D4A43">Mặt trước</text>
+            <text x="0" y="18" fill="#6B7A70">gan · cơ hoành · thành bụng trước</text>
+            <text x="0" y="46" font-weight="700" fill="#3D4A43">Mặt sau — toàn chữ T</text>
+            <text x="0" y="64" fill="#6B7A70">tá tràng · tuỵ · tỳ · thượng thận trái</text>
+            <text x="0" y="82" fill="#6B7A70">· thận trái</text>
+          </g>
+        </svg>
+        <figcaption>Chữ J dựng đứng: <b>phần đứng</b> là phình vị – thân vị – đáy vị, gập lại thành <b>phần nằm</b> là hang vị – môn vị. Hai đầu là hai lỗ: tâm vị ở trên nối thực quản, môn vị ở dưới nối tá tràng.</figcaption>
+      </figure>
+    </div>
+
     <p class="tip"><b>Mẹo:</b> dạ dày là cơ quan “toàn số 2” — 2 mặt, 2 bờ, 2 lỗ; bờ nhỏ đi với mạc nối nhỏ, bờ lớn đi với mạc nối lớn. Mặt sau toàn chữ T: tá tràng – tuỵ – tỳ – thượng thận trái – thận trái.</p>
   </section>
 
@@ -625,6 +1081,81 @@
 
       </div>
     </div>
+    <div class="figbox">
+      <figure class="fig">
+        <svg viewBox="0 0 760 506" xmlns="http://www.w3.org/2000/svg" role="img"
+             aria-label="Ba nhóm chức năng của thận: bài tiết chất độc và cặn bã, tổng hợp amoniac điều hoà pH, và điều hoà năm thành phần của máu.">
+          <defs>
+            <marker id="ar6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" fill="#4B6B2A"/>
+            </marker>
+          </defs>
+
+          <!-- quả thận -->
+          <path d="M136,58 C70,64 34,124 38,202 C42,282 88,340 142,336 C174,334 174,304 158,282 C142,260 140,224 154,198 C170,168 170,54 136,58 Z"
+                fill="#DEE8D1" stroke="var(--accent)" stroke-width="2.8" stroke-linejoin="round"/>
+          <path d="M150,196 C168,206 172,228 158,246" fill="none" stroke="#8FA87C" stroke-width="2" stroke-dasharray="5 4"/>
+          <!-- niệu quản -->
+          <path d="M160,252 C190,266 198,300 194,346 L194,404" fill="none" stroke="#9AAE8B" stroke-width="9" stroke-linecap="round"/>
+          <text x="200" y="428" font-size="12.5" fill="#6B7A70">đào thải theo nước tiểu</text>
+          <text x="104" y="198" text-anchor="middle" font-size="15" font-weight="700" fill="var(--accent)">THẬN</text>
+
+          <!-- mũi tên toả ra -->
+          <g stroke="var(--accent)" stroke-width="2.4" fill="none" marker-end="url(#ar6)">
+            <path d="M172,120 C206,96 220,84 246,80"/>
+            <path d="M176,190 C206,186 216,186 246,186"/>
+            <path d="M170,266 C206,282 216,300 246,312"/>
+          </g>
+
+          <!-- ① bài tiết -->
+          <g>
+            <rect x="252" y="28" width="496" height="100" rx="4" fill="#FBFCFA" stroke="var(--rule)" stroke-width="1.5"/>
+            <rect x="252" y="28" width="5" height="100" fill="var(--accent)"/>
+            <text x="270" y="52" font-size="13.5" font-weight="700" fill="var(--accent)">① BÀI TIẾT chất độc và chất cặn bã</text>
+            <text x="270" y="76" font-size="12.5" fill="#3D4A43">Chuyển hoá <tspan font-weight="600">protit</tspan> → ure · acid uric · creatinin</text>
+            <text x="270" y="96" font-size="12.5" fill="#3D4A43">Hoạt động của cơ thể → <tspan font-weight="600">acid lactic</tspan></text>
+            <text x="270" y="118" font-size="12.5" fill="#6B7A70">⇒ tất cả được đào thải ra theo nước tiểu</text>
+          </g>
+
+          <!-- ② tổng hợp -->
+          <g>
+            <rect x="252" y="140" width="496" height="72" rx="4" fill="#FBFCFA" stroke="var(--rule)" stroke-width="1.5"/>
+            <rect x="252" y="140" width="5" height="72" fill="var(--accent)"/>
+            <text x="270" y="164" font-size="13.5" font-weight="700" fill="var(--accent)">② CHỨC NĂNG TỔNG HỢP</text>
+            <text x="270" y="188" font-size="12.5" fill="#3D4A43">Sản sinh <tspan font-weight="700" fill="#4B6B2A">amoniac (NH₃)</tspan> — có tính kiềm</text>
+            <text x="270" y="206" font-size="12.5" fill="#6B7A70">→ tham gia điều hoà pH của máu</text>
+          </g>
+
+          <!-- ③ điều hoà -->
+          <g>
+            <rect x="252" y="224" width="496" height="266" rx="4" fill="#FBFCFA" stroke="var(--rule)" stroke-width="1.5"/>
+            <rect x="252" y="224" width="5" height="266" fill="var(--accent)"/>
+            <text x="270" y="250" font-size="13.5" font-weight="700" fill="var(--accent)">③ ĐIỀU HOÀ CÁC THÀNH PHẦN CỦA MÁU — 5 mục</text>
+            <text x="270" y="270" font-size="12" fill="#6B7A70">thứ tự: nước → muối → pH → huyết áp → tạo máu</text>
+          </g>
+          <rect x="268" y="277" width="104" height="24" rx="12" fill="#E4EDDD" stroke="#8FA87C" stroke-width="1.2"/>
+          <text x="320" y="294" text-anchor="middle" font-size="12.5" font-weight="700" fill="#3E5A22">Nước</text>
+          <text x="384" y="294" font-size="12" fill="#3D4A43">uống nhiều → nước trong máu tăng → tăng thải → tiểu nhiều</text>
+          <rect x="268" y="307" width="104" height="24" rx="12" fill="#E4EDDD" stroke="#8FA87C" stroke-width="1.2"/>
+          <text x="320" y="324" text-anchor="middle" font-size="12.5" font-weight="700" fill="#3E5A22">NaCl</text>
+          <text x="384" y="324" font-size="12" fill="#3D4A43">NaCl trong máu tăng → thận tăng đào thải NaCl</text>
+          <text x="384" y="341" font-size="12" fill="#3D4A43">giữ áp lực thẩm thấu · viêm thận → thải kém → phù → ăn nhạt</text>
+          <rect x="268" y="354" width="104" height="24" rx="12" fill="#E4EDDD" stroke="#8FA87C" stroke-width="1.2"/>
+          <text x="320" y="371" text-anchor="middle" font-size="12.5" font-weight="700" fill="#3E5A22">pH</text>
+          <text x="384" y="371" font-size="12" fill="#3D4A43">nước tiểu 4,2 (acid) – 8,2 (kiềm), trung bình 6</text>
+          <text x="384" y="388" font-size="12" fill="#3D4A43">máu acid → thải phosphat 1 kiềm · máu kiềm → 2 kiềm</text>
+          <rect x="268" y="401" width="104" height="24" rx="12" fill="#E4EDDD" stroke="#8FA87C" stroke-width="1.2"/>
+          <text x="320" y="418" text-anchor="middle" font-size="12.5" font-weight="700" fill="#3E5A22">Huyết áp</text>
+          <text x="384" y="418" font-size="12" fill="#3D4A43">thận tiết <tspan font-weight="700" fill="#4B6B2A">renin</tspan> → tăng huyết áp, đủ máu vào thận</text>
+          <rect x="268" y="431" width="104" height="24" rx="12" fill="#E4EDDD" stroke="#8FA87C" stroke-width="1.2"/>
+          <text x="320" y="448" text-anchor="middle" font-size="12.5" font-weight="700" fill="#3E5A22">Tạo máu</text>
+          <text x="384" y="448" font-size="12" fill="#3D4A43"><tspan font-weight="700" fill="#4B6B2A">Erythropoietin</tspan> → tuỷ xương sinh hồng cầu</text>
+          <text x="384" y="465" font-size="12" fill="#3D4A43">suy thận → giảm Erythropoietin → thiếu máu</text>
+        </svg>
+        <figcaption>Khung ba nhánh: <b>thải – tổng hợp – điều hoà</b>. Hai hormon dễ quên nằm ở hai dòng cuối: <b>renin</b> lo huyết áp, <b>erythropoietin</b> lo hồng cầu.</figcaption>
+      </figure>
+    </div>
+
     <p class="tip"><b>Khung ba nhánh:</b> thải – tổng hợp – điều hoà. Riêng nhánh điều hoà có năm mục theo thứ tự nước → muối → pH → huyết áp → tạo máu, và hai hormon đi kèm: renin lo huyết áp, erythropoietin lo hồng cầu.</p>
   </section>
 
@@ -709,23 +1240,184 @@
 
       </div>
     </div>
+    <div class="figbox">
+      <figure class="fig">
+        <svg viewBox="0 0 760 480" xmlns="http://www.w3.org/2000/svg" role="img"
+             aria-label="Thiết đồ cắt buồng trứng: lớp ngoài chứa nang trứng phát triển dần thành nang De Graaf rồi rụng trứng và thành hoàng thể; lớp trong là mô liên kết. Nang tiết estrogen, hoàng thể tiết progesteron.">
+          <defs>
+            <marker id="ar7" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" fill="#6B3F8C"/>
+            </marker>
+            <marker id="ar7g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" fill="#9A83AE"/>
+            </marker>
+          </defs>
+
+          <!-- buồng trứng: lớp ngoài -->
+          <ellipse cx="225" cy="200" rx="175" ry="125" fill="#F0E6F4" stroke="var(--accent)" stroke-width="2.8"/>
+          <!-- lớp trong -->
+          <ellipse cx="225" cy="205" rx="104" ry="62" fill="#E0CDE9" stroke="#9A83AE" stroke-width="1.8" stroke-dasharray="7 5"/>
+          <g stroke="#B4232A" stroke-width="2" fill="none" opacity=".65">
+            <path d="M146,174 C178,162 212,184 244,166 C270,152 298,172 314,164"/>
+            <path d="M152,192 C186,204 222,182 256,196 C282,204 302,190 312,186"/>
+          </g>
+
+          <!-- chuỗi nang trứng -->
+          <g stroke="#9A83AE" stroke-width="1.8" fill="none" stroke-dasharray="5 4" marker-end="url(#ar7g)">
+            <path d="M124,140 C138,124 146,118 152,114"/>
+            <path d="M184,100 C198,94 208,92 214,92"/>
+            <path d="M256,96 C268,98 276,100 282,102"/>
+            <path d="M330,128 C342,138 348,146 352,152"/>
+            <path d="M368,196 C372,222 360,244 348,254"/>
+          </g>
+
+          <!-- nang nguyên thuỷ -->
+          <g fill="#C9AEDA" stroke="#6B3F8C" stroke-width="1.2">
+            <circle cx="96" cy="164" r="5"/><circle cx="108" cy="150" r="5"/><circle cx="94" cy="140" r="5"/>
+          </g>
+          <!-- nang đang phát triển -->
+          <circle cx="168" cy="108" r="14" fill="#DCC7E8" stroke="var(--accent)" stroke-width="2"/>
+          <circle cx="168" cy="108" r="5" fill="#6B3F8C"/>
+          <circle cx="232" cy="92" r="20" fill="#DCC7E8" stroke="var(--accent)" stroke-width="2"/>
+          <circle cx="238" cy="96" r="6" fill="#6B3F8C"/>
+          <path d="M222,84 A11,11 0 0,1 236,80" stroke="#fff" stroke-width="3" fill="none"/>
+          <!-- nang De Graaf -->
+          <circle cx="304" cy="114" r="27" fill="#F7F2FA" stroke="var(--accent)" stroke-width="3"/>
+          <circle cx="304" cy="114" r="18" fill="#EADFF1"/>
+          <circle cx="316" cy="124" r="7.5" fill="#6B3F8C"/>
+          <!-- rụng trứng -->
+          <path d="M362,150 A24,24 0 1,0 386,186" fill="#F7F2FA" stroke="var(--accent)" stroke-width="3"/>
+          <circle cx="398" cy="152" r="7.5" fill="#6B3F8C"/>
+          <path d="M382,162 L394,156" stroke="#6B3F8C" stroke-width="2" stroke-linecap="round"/>
+          <!-- hoàng thể -->
+          <circle cx="336" cy="268" r="26" fill="#E8C85A" stroke="#A8862A" stroke-width="2.5"/>
+          <path d="M320,258 C330,268 342,258 352,268 M320,276 C330,286 342,276 352,286" stroke="#A8862A" stroke-width="1.8" fill="none"/>
+
+          <!-- nhãn trong hình -->
+          <g font-size="11.5" fill="#5A4A66" text-anchor="middle">
+            <text x="110" y="190">nang nguyên thuỷ</text>
+            <text x="170" y="134" fill="#5A4A66">nang đang</text>
+            <text x="170" y="146" fill="#5A4A66">phát triển</text>
+            <text x="304" y="60" font-size="12.5" font-weight="700" fill="var(--accent)">nang De Graaf</text>
+            <text x="304" y="74" font-size="11.5">(noãn bào trưởng thành)</text>
+            <text x="352" y="218" font-size="12" font-weight="600" fill="var(--accent)">rụng trứng</text>
+            <text x="336" y="322" font-size="12.5" font-weight="700" fill="#8A6B12">hoàng thể</text>
+            <text x="225" y="230" font-size="12.5" font-weight="700" fill="#5A4A66">LỚP TRONG</text>
+            <text x="225" y="248" font-size="11.5" fill="#5A4A66">mô liên kết · mạch máu · thần kinh</text>
+            <text x="152" y="266" font-size="12.5" font-weight="700" fill="var(--accent)">LỚP NGOÀI</text>
+            <text x="152" y="282" font-size="11.5" fill="#5A4A66">chứa các nang trứng</text>
+          </g>
+
+          <!-- mũi tên hormon -->
+          <g stroke="var(--accent)" stroke-width="2.4" fill="none" marker-end="url(#ar7)">
+            <path d="M332,106 C372,92 396,88 418,88"/>
+            <path d="M364,272 C388,276 400,278 418,278"/>
+          </g>
+
+          <!-- Estrogen -->
+          <g>
+            <rect x="424" y="44" width="328" height="132" rx="4" fill="#FBFCFA" stroke="var(--accent)" stroke-width="1.5"/>
+            <rect x="424" y="44" width="5" height="132" fill="var(--accent)"/>
+            <text x="442" y="68" font-size="14" font-weight="700" fill="var(--accent)">ESTROGEN (Foliculin)</text>
+            <text x="442" y="85" font-size="11.5" fill="#6B7A70">lớp áo trong của nang trứng tiết ra</text>
+            <g font-size="12.5" fill="#3D4A43">
+              <text x="442" y="110">· Kích thích phát triển bộ phận sinh dục</text>
+              <text x="442" y="131">· Phát triển tử cung và niêm mạc tử cung</text>
+              <text x="442" y="152">· Phát triển tuyến vú và giới tính</text>
+            </g>
+            <text x="442" y="170" font-size="11.5" font-style="italic" fill="#8A7AA0">“Xây dựng”</text>
+          </g>
+
+          <!-- Progesteron -->
+          <g>
+            <rect x="424" y="192" width="328" height="132" rx="4" fill="#FBFCFA" stroke="#A8862A" stroke-width="1.5"/>
+            <rect x="424" y="192" width="5" height="132" fill="#A8862A"/>
+            <text x="442" y="216" font-size="14" font-weight="700" fill="#8A6B12">PROGESTERON</text>
+            <text x="442" y="233" font-size="11.5" fill="#6B7A70">hoàng thể tiết ra, nửa cuối kỳ kinh nguyệt</text>
+            <g font-size="12.5" fill="#3D4A43">
+              <text x="442" y="258">· Tử cung mềm mại, giảm co bóp khi có thai</text>
+              <text x="442" y="279">· Giúp trứng phát triển, thụ thai và làm tổ</text>
+              <text x="442" y="300">· Khớp và khung chậu giãn ra khi sinh</text>
+            </g>
+            <text x="442" y="318" font-size="11.5" font-style="italic" fill="#8A7A50">“Giữ”</text>
+          </g>
+
+          <!-- dải số liệu -->
+          <g transform="translate(20,352)">
+            <rect x="0" y="0" width="732" height="112" rx="4" fill="#F6F1F8" stroke="var(--rule)" stroke-width="1.5"/>
+            <text x="18" y="26" font-size="13" font-weight="700" fill="var(--accent)">SỐ NANG TRỨNG</text>
+            <text x="18" y="52" font-size="14" font-weight="700" fill="#3D4A43">300.000 – 400.000</text>
+            <text x="18" y="70" font-size="11.5" fill="#6B7A70">bọc nguyên thuỷ ở hai buồng trứng</text>
+            <path d="M212,52 L262,52" stroke="var(--accent)" stroke-width="2" marker-end="url(#ar7)" fill="none"/>
+            <text x="212" y="40" font-size="11" fill="#6B7A70">đến tuổi dậy thì</text>
+            <text x="278" y="52" font-size="14" font-weight="700" fill="#3D4A43">300 – 400</text>
+            <text x="278" y="70" font-size="11.5" fill="#6B7A70">noãn bào trưởng thành (De Graaf)</text>
+
+            <path d="M500,14 L500,98" stroke="var(--rule)" stroke-width="1.5"/>
+            <text x="520" y="26" font-size="13" font-weight="700" fill="var(--accent)">HÌNH THỂ – VỊ TRÍ</text>
+            <g font-size="11.5" fill="#3D4A43">
+              <text x="520" y="48">2 buồng trứng, hình hạt thị hơi dẹt</text>
+              <text x="520" y="66">Dài 3–4 cm · rộng 2 cm · nặng 5–6 g</text>
+              <text x="520" y="84">Màu hồng → đỏ sẫm khi có kinh</text>
+            </g>
+            <text x="18" y="98" font-size="11.5" fill="#6B7A70">Vị trí: sát thành sau chậu hông bé, dưới eo trên khoảng 10 mm — vùng hố chậu.</text>
+          </g>
+        </svg>
+        <figcaption>Đi theo vòng mũi tên ở <b>lớp ngoài</b>: nang nguyên thuỷ → nang phát triển → <b>nang De Graaf</b> → rụng trứng → <b>hoàng thể</b>. Nang tiết <b>Estrogen</b> (xây dựng), hoàng thể tiết <b>Progesteron</b> (giữ).</figcaption>
+      </figure>
+    </div>
+
     <p class="tip"><b>Mẹo phân biệt hai hormon:</b> Estrogen lo phần “xây dựng” — làm cơ thể và bộ phận sinh dục phát triển; Progesteron lo phần “giữ” — giữ thai yên, mềm tử cung, mở khung chậu lúc sinh.</p>
   </section>
 
 </div>
 
 <script>
-  (function(){
-    var btn = document.getElementById('btn-pdf');
-    if(!btn) return;
+(function(){
+  var KEY   = 'yhct.figs.shown';
+  var figs  = Array.prototype.slice.call(document.querySelectorAll('.figbox'));
+  var btnF  = document.getElementById('btn-figs');
+  var btnP  = document.getElementById('btn-pdf');
+  var label = btnF ? btnF.querySelector('.figs-label') : null;
+
+  // \u0110\u1ecdc l\u1ef1a ch\u1ecdn l\u1ea7n tr\u01b0\u1edbc; m\u1eb7c \u0111\u1ecbnh l\u00e0 hi\u1ec7n h\u00ecnh
+  function readPref(){
+    try{
+      var v = window.localStorage.getItem(KEY);
+      return v === null ? true : v === '1';
+    }catch(e){ return true; }
+  }
+  function writePref(on){
+    try{ window.localStorage.setItem(KEY, on ? '1' : '0'); }catch(e){}
+  }
+
+  function setShown(on, save){
+    figs.forEach(function(d){ d.hidden = !on; });
+    if(btnF){
+      btnF.setAttribute('data-state', on ? 'open' : 'closed');
+      btnF.setAttribute('aria-pressed', on ? 'true' : 'false');
+      label.textContent = on ? '\u1ea8n h\u00ecnh minh ho\u1ea1' : 'Hi\u1ec7n h\u00ecnh minh ho\u1ea1';
+    }
+    if(save) writePref(on);
+  }
+
+  if(btnF){
+    btnF.addEventListener('click', function(){
+      setShown(btnF.getAttribute('data-state') !== 'open', true);
+    });
+  }
+  setShown(readPref(), false);
+
+  if(btnP){
     var title = document.title;
-    btn.addEventListener('click', function(){
-      // Tên file gợi ý khi lưu PDF chính là title của trang
+    btnP.addEventListener('click', function(){
+      // T\u00ean file g\u1ee3i \u00fd khi l\u01b0u PDF ch\u00ednh l\u00e0 title c\u1ee7a trang
       document.title = 'Mind map on thi Giai phau - Sinh ly 2026';
       window.print();
       setTimeout(function(){ document.title = title; }, 1000);
     });
-  })();
+  }
+})();
 </script>
 </body>
 </html>
