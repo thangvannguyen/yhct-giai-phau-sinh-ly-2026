@@ -8,6 +8,37 @@
 <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2213%22%20fill%3D%22%231E2A24%22%2F%3E%3Cg%20stroke%3D%22%238FB79A%22%20stroke-width%3D%223.4%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M27%2032h8%22%2F%3E%3Cpath%20d%3D%22M35%2032v-13h9%22%2F%3E%3Cpath%20d%3D%22M35%2032h9%22%2F%3E%3Cpath%20d%3D%22M35%2032v13h9%22%2F%3E%3C%2Fg%3E%3Crect%20x%3D%229%22%20y%3D%2224%22%20width%3D%2218%22%20height%3D%2216%22%20rx%3D%223.5%22%20fill%3D%22%23F1F3EE%22%2F%3E%3Cg%20fill%3D%22%238FB79A%22%3E%3Crect%20x%3D%2244%22%20y%3D%2215.5%22%20width%3D%2211%22%20height%3D%227%22%20rx%3D%222%22%2F%3E%3Crect%20x%3D%2244%22%20y%3D%2228.5%22%20width%3D%2211%22%20height%3D%227%22%20rx%3D%222%22%2F%3E%3Crect%20x%3D%2244%22%20y%3D%2241.5%22%20width%3D%2211%22%20height%3D%227%22%20rx%3D%222%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
 <meta name="theme-color" content="#1E2A24">
 <meta name="description" content="Mind map ôn thi Giải phẫu – Sinh lý: bảy sơ đồ cho bảy câu, kèm hình minh hoạ và bản PDF tải về.">
+<!-- ===================== Google Analytics (GA4) =====================
+     Đổi luồng đo thì sửa Measurement ID ở dòng window.GA_ID dưới đây
+     (lấy ở GA: Admin → Data streams → chọn luồng web).
+     Để trống hoặc để G-XXXXXXXXXX thì phần này tự tắt: không tải script, không gửi dữ liệu.
+================================================================== -->
+<script>
+  window.GA_ID = 'G-LZ1XC0FH0G';
+
+  (function(){
+    var id = window.GA_ID;
+    var hopLe = typeof id === 'string' && /^G-[A-Z0-9]{6,}$/.test(id) && id !== 'G-XXXXXXXXXX';
+
+    // gaTrack luôn tồn tại để phần còn lại của trang gọi thoải mái,
+    // chưa có ID thì nó không làm gì cả.
+    window.gaTrack = function(ten, thamSo){
+      if(typeof window.gtag === 'function'){ window.gtag('event', ten, thamSo || {}); }
+    };
+    if(!hopLe) return;
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', id);
+
+    var sc = document.createElement('script');
+    sc.async = true;
+    sc.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(id);
+    document.head.appendChild(sc);
+  })();
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
@@ -1403,7 +1434,9 @@
 
   if(btnF){
     btnF.addEventListener('click', function(){
-      setShown(btnF.getAttribute('data-state') !== 'open', true);
+      var on = btnF.getAttribute('data-state') !== 'open';
+      setShown(on, true);
+      window.gaTrack('doi_hinh_minh_hoa', { trang_thai: on ? 'hien' : 'an' });
     });
   }
   setShown(readPref(), false);
@@ -1411,10 +1444,32 @@
   if(btnP){
     var title = document.title;
     btnP.addEventListener('click', function(){
+      window.gaTrack('tai_pdf', {
+        hinh_minh_hoa: (btnF && btnF.getAttribute('data-state') === 'open') ? 'hien' : 'an'
+      });
       // T\u00ean file g\u1ee3i \u00fd khi l\u01b0u PDF ch\u00ednh l\u00e0 title c\u1ee7a trang
       document.title = 'Mind map on thi Giai phau - Sinh ly 2026';
       window.print();
       setTimeout(function(){ document.title = title; }, 1000);
+    });
+  }
+
+  // \u0110\u1ecdc t\u1edbi c\u00e2u n\u00e0o \u2014 m\u1ed7i c\u00e2u ch\u1ec9 b\u00e1o m\u1ed9t l\u1ea7n cho m\u1ed7i l\u1ea7n m\u1edf trang
+  if('IntersectionObserver' in window){
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting) return;
+        var sec = en.target;
+        obs.unobserve(sec);
+        var h2 = sec.querySelector('.q-head h2');
+        window.gaTrack('xem_cau', {
+          cau: sec.id,
+          ten_cau: h2 ? h2.textContent.trim().slice(0, 90) : sec.id
+        });
+      });
+    }, { threshold: 0.25 });
+    Array.prototype.forEach.call(document.querySelectorAll('section.q'), function(sec){
+      obs.observe(sec);
     });
   }
 })();
