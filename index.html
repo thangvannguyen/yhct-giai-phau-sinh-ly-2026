@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mind map ôn thi Giải phẫu – Sinh lý</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F1F3EE;
+    --ink:#1E2A24;
+    --muted:#6B7A70;
+    --rule:#D5DBD1;
+    --card:#FBFCFA;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Be Vietnam Pro",system-ui,"Segoe UI",Roboto,Arial,sans-serif;
+    font-size:16px;
+    line-height:1.5;
+  }
+  .wrap{max-width:980px;margin:0 auto;padding:40px 20px 80px}
+
+  /* ---------- mở đầu ---------- */
+  .top{border-bottom:2px solid var(--ink);padding-bottom:22px;margin-bottom:30px}
+  .top h1{
+    font-family:Lora,Georgia,serif;
+    font-weight:600;
+    font-size:clamp(28px,5.5vw,42px);
+    line-height:1.15;
+    margin:0 0 8px;
+    letter-spacing:-.01em;
+  }
+  .top p{margin:0;color:var(--muted);max-width:60ch}
+
+  .index{
+    list-style:none;margin:26px 0 0;padding:0;
+    display:grid;gap:10px;
+    grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+  }
+  .index a{
+    display:block;text-decoration:none;color:inherit;
+    background:var(--card);
+    border-left:5px solid var(--accent,#999);
+    padding:9px 12px;
+  }
+  .index a:hover,.index a:focus-visible{background:#fff;outline:none;box-shadow:inset 0 0 0 1px var(--rule)}
+  .index .idx-core{display:block;font-weight:700;font-size:14px;color:var(--accent)}
+  .index .idx-q{display:block;font-size:13px;color:var(--muted)}
+
+  /* ---------- mỗi câu ---------- */
+  .q{margin-top:54px}
+  .q-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+  .q-no{
+    font-size:13px;font-weight:700;color:#fff;background:var(--accent);
+    padding:3px 9px;border-radius:2px;white-space:nowrap;
+  }
+  .q-head h2{
+    font-family:Lora,Georgia,serif;font-weight:600;
+    font-size:clamp(19px,3.4vw,25px);margin:0;line-height:1.25;flex:1 1 240px;
+  }
+
+  .map{display:flex;align-items:center}
+  .core{
+    flex:0 0 auto;position:relative;
+    background:var(--accent);color:#fff;
+    font-weight:700;font-size:17px;letter-spacing:.02em;
+    padding:16px 18px;max-width:150px;
+    border-radius:3px;
+  }
+  .core::after{
+    content:"";position:absolute;left:100%;top:50%;
+    width:30px;height:2px;background:var(--accent);
+  }
+  .branches{
+    flex:1 1 auto;min-width:0;
+    margin-left:30px;padding-left:0;
+    border-left:2px solid var(--accent);
+    display:flex;flex-direction:column;gap:20px;
+  }
+  .branch{position:relative;padding-left:26px}
+  .branch::before{
+    content:"";position:absolute;left:0;top:12px;
+    width:26px;height:2px;background:var(--accent);opacity:.55;
+  }
+  .b-head{
+    font-weight:600;font-size:15.5px;color:var(--accent);
+    padding-bottom:3px;border-bottom:1px solid var(--rule);
+  }
+  .leaves{
+    list-style:none;margin:9px 0 0;padding:0 0 0 16px;
+    border-left:1px dashed #C3CCC0;
+    display:flex;flex-direction:column;gap:6px;
+  }
+  .leaves li{position:relative;font-size:14.5px;line-height:1.45}
+  .leaves li::before{
+    content:"";position:absolute;left:-16px;top:.7em;
+    width:10px;height:1px;background:#C3CCC0;
+  }
+  .leaves .sub{
+    list-style:none;margin:6px 0 2px;padding:0 0 0 14px;
+    border-left:1px dashed #D7DED4;
+    display:flex;flex-direction:column;gap:4px;
+  }
+  .leaves .sub li{font-size:13.8px;color:#3D4A43}
+  .leaves .sub li::before{left:-14px;width:8px}
+
+  .k{font-weight:600}
+  .n{font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums}
+
+  .fig{
+    margin:12px 0 4px;padding:14px 8px 10px;
+    background:var(--card);border:1px solid var(--rule);border-radius:3px;
+  }
+  .fig svg{display:block;width:100%;height:auto;max-width:560px;margin:0 auto}
+  .fig figcaption{
+    margin-top:10px;text-align:center;font-size:13px;color:var(--muted);line-height:1.45;
+  }
+  .fig text{font-family:"Be Vietnam Pro",system-ui,Arial,sans-serif}
+
+  .tip{
+    margin:20px 0 0;padding:11px 16px;
+    background:var(--card);border-left:3px solid var(--accent);
+    font-family:Lora,Georgia,serif;font-style:italic;font-size:15px;line-height:1.5;
+  }
+  .tip b{font-style:normal;font-weight:600}
+
+  /* ---------- màn hình hẹp ---------- */
+  @media (max-width:640px){
+    .wrap{padding:28px 14px 60px}
+    .map{flex-direction:column;align-items:stretch}
+    .core{max-width:none;text-align:center;padding:13px 16px;font-size:16px}
+    .core::after{left:50%;top:100%;width:2px;height:18px}
+    .branches{margin:18px 0 0 10px}
+  }
+
+  /* ---------- in ra giấy ---------- */
+  @media print{
+    body{background:#fff;font-size:11.5pt}
+    .wrap{max-width:none;padding:0}
+    .index{display:none}
+    .q{break-inside:avoid;page-break-inside:avoid;margin-top:26px}
+    .core{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .q-no{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top">
+    <h1>Bảy sơ đồ cho bảy câu</h1>
+    <p>Mỗi câu là một bản đồ: từ lõi ở giữa toả ra các nhánh lớn, rồi mới đến chi tiết. Học theo nhánh, đừng học theo dòng — khi thi chỉ cần nhớ tên nhánh là kéo được cả chùm ý theo sau.</p>
+
+    <ul class="index">
+      <li style="--accent:#8A6B3D"><a href="#c1"><span class="idx-core">KHỚP</span><span class="idx-q">Câu 1 · Phân loại &amp; khớp động</span></a></li>
+      <li style="--accent:#B4232A"><a href="#c2"><span class="idx-core">TIM</span><span class="idx-q">Câu 2 · Vị trí &amp; hình thể ngoài</span></a></li>
+      <li style="--accent:#7A1F4B"><a href="#c3"><span class="idx-core">TRUYỀN MÁU</span><span class="idx-q">Câu 3 · Nguyên tắc &amp; sơ đồ</span></a></li>
+      <li style="--accent:#1D6F7A"><a href="#c4"><span class="idx-core">HÔ HẤP</span><span class="idx-q">Câu 4 · Hiện tượng cơ học</span></a></li>
+      <li style="--accent:#C0741B"><a href="#c5"><span class="idx-core">DẠ DÀY</span><span class="idx-q">Câu 5 · Vị trí &amp; hình thể ngoài</span></a></li>
+      <li style="--accent:#4B6B2A"><a href="#c6"><span class="idx-core">THẬN</span><span class="idx-q">Câu 6 · Chức năng</span></a></li>
+      <li style="--accent:#6B3F8C"><a href="#c7"><span class="idx-core">BUỒNG TRỨNG</span><span class="idx-q">Câu 7 · Giải phẫu &amp; nội tiết</span></a></li>
+    </ul>
+  </div>
+
+  <!-- ================= CÂU 1 ================= -->
+  <section class="q" id="c1" style="--accent:#8A6B3D">
+    <div class="q-head">
+      <span class="q-no">Câu 1</span>
+      <h2>Phân loại khớp và cấu trúc của một khớp động</h2>
+    </div>
+
+    <div class="map">
+      <div class="core">KHỚP</div>
+      <div class="branches">
+
+        <div class="branch">
+          <div class="b-head">Khái niệm</div>
+          <ul class="leaves">
+            <li>Các xương tiếp khớp với nhau tạo thành <span class="k">bộ xương</span></li>
+            <li>Vị trí xương tiếp nối nhau gọi là <span class="k">khớp xương</span></li>
+          </ul>
+        </div>
+
+        <div class="branch">
+          <div class="b-head"><span class="n">3</span> loại khớp</div>
+          <ul class="leaves">
+            <li><span class="k">Bất động</span> — khớp xương sọ</li>
+            <li><span class="k">Bán động</span> — khớp đốt sống, khớp cùng chậu</li>
+            <li><span class="k">Động</span> — các khớp ở tay và chân</li>
+          </ul>
+        </div>
+
+        <div class="branch">
+          <div class="b-head">Cấu trúc khớp động — <span class="n">3</span> phần</div>
+          <ul class="leaves">
+            <li><span class="k">Mặt khớp</span>
+              <ul class="sub">
+                <li>Được bao phủ một lớp sụn</li>
+                <li>Hình thể khác nhau tuỳ từng khớp</li>
+                <li>Thường 2 mặt đối lập: <span class="k">1 lồi – 1 lõm</span></li>
+              </ul>
+            </li>
+            <li><span class="k">Bao khớp</span> — nối các đầu xương với nhau
+              <ul class="sub">
+                <li>Lớp ngoài: lớp <span class="k">xơ</span></li>
+                <li>Lớp trong: bao <span class="k">hoạt dịch</span></li>
+                <li><span class="k">Dây chằng</span> tăng cường phía ngoài bao khớp</li>
+              </ul>
+            </li>
+            <li><span class="k">Ổ khớp</span>
+              <ul class="sub">
+                <li>Khe giới hạn bởi bao khớp và sụn khớp</li>
+                <li>Chứa dịch do bao hoạt dịch tiết ra</li>
+                <li>Tác dụng: <span class="k">giảm ma sát</span> khi khớp cử động</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <p class="tip"><b>Mẹo:</b> ba loại khớp đi theo “sọ – sống – tay chân”; khớp động đi theo “mặt – bao – ổ”, và riêng bao khớp nhớ từ ngoài vào trong: xơ → hoạt dịch → dây chằng phủ ngoài.</p>
+  </section>
+
+  <!-- ================= CÂU 2 ================= -->
+  <section class="q" id="c2" style="--accent:#B4232A">
+    <div class="q-head">
+      <span class="q-no">Câu 2</span>
+      <h2>Vị trí và hình thể ngoài của tim</h2>
+    </div>
+
+    <div class="map">
+      <div class="core">TIM</div>
+      <div class="branches">
+
+        <div class="branch">
+          <div class="b-head">Vị trí</div>
+          <ul class="leaves">
+            <li>Trong khoang lồng ngực, thuộc <span class="k">trung thất trước</span></li>
+            <li>Giữa <span class="k">hai lá phổi</span></li>
+            <li>Sau <span class="k">xương ức và các sụn sườn</span></li>
+            <li>Trước <span class="k">khí quản và thực quản</span></li>
+            <li>Lệch về <span class="k">bên trái</span></li>
+          </ul>
+        </div>
+
+        <div class="branch">
+          <div class="b-head">Hình tháp tam giác: <span class="n">3</span> mặt – <span class="n">1</span> nền – <span class="n">1</span> đỉnh</div>
+          <ul class="leaves">
+            <li><span class="k">Mặt trước</span> (mặt ức sườn)
+              <ul class="sub">
+                <li>Rãnh ngang = liên nhĩ thất trước → động, tĩnh mạch vành <span class="k">phải</span></li>
+                <li>Rãnh dọc = liên thất trước → động, tĩnh mạch vành <span class="k">trái</span></li>
+                <li>Trên rãnh: động mạch chủ + động mạch phổi</li>
+                <li>Ngoài hai động mạch: <span class="k">hai tiểu nhĩ</span></li>
+              </ul>
+            </li>
+            <li><span class="k">Mặt dưới</span> (mặt hoành)
+              <ul class="sub">
+                <li>Đè lên cơ hoành, qua đó liên quan <span class="k">gan và dạ dày</span></li>
+                <li>Rãnh ngang = liên nhĩ thất sau → mạch vành <span class="k">trái</span></li>
+                <li>Rãnh dọc = liên thất sau → mạch vành <span class="k">phải</span></li>
+              </ul>
+            </li>
+            <li><span class="k">Mặt trái</span> (mặt phổi) — áp sát phổi và màng phổi</li>
+            <li><span class="k">Đỉnh</span> (mỏm tim)
+              <ul class="sub">
+                <li>Quay xuống dưới</li>
+                <li>Chiếu lên thành ngực ở khoang liên sườn <span class="n">V</span>, đường giữa đòn trái</li>
+              </ul>
+            </li>
+            <li><span class="k">Nền</span> (đáy tim)
+              <ul class="sub">
+                <li>Hướng lên trên – ra sau – sang phải</li>
+                <li>Là mặt sau của <span class="k">hai tâm nhĩ</span> phải và trái</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <p class="tip"><b>Chỗ dễ lẫn nhất:</b> mặt trước — rãnh ngang đi với vành <b>phải</b>, rãnh dọc đi với vành <b>trái</b>. Xuống mặt dưới thì <b>đảo ngược</b> cả hai.</p>
+  </section>
+
+  <!-- ================= CÂU 3 ================= -->
+  <section class="q" id="c3" style="--accent:#7A1F4B">
+    <div class="q-head">
+      <span class="q-no">Câu 3</span>
+      <h2>Các nguyên tắc truyền máu và sơ đồ truyền máu</h2>
+    </div>
+
+    <div class="map">
+      <div class="core">TRUYỀN MÁU</div>
+      <div class="branches">
+
+        <div class="branch">
+          <div class="b-head">Nguyên tắc cơ bản</div>
+          <ul class="leaves">
+            <li>Không cho <span class="k">kháng nguyên của hồng cầu</span> gặp <span class="k">kháng thể đối kháng trong huyết tương</span></li>
+            <li>⇒ Phải truyền máu <span class="k">cùng nhóm</span></li>
+          </ul>
+        </div>
+
+        <div class="branch">
+          <div class="b-head">Nguyên tắc tối thiểu</div>
+          <ul class="leaves">
+            <li>Chỉ dùng khi <span class="k">tối cần thiết</span>, không có máu cùng nhóm</li>
+            <li>Vẫn phải tuân theo nguyên tắc cơ bản: huyết tương người <span class="k">nhận</span> không được chứa kháng thể chống lại kháng nguyên hồng cầu người <span class="k">cho</span></li>
+          </ul>
+        </div>
+
+        <div class="branch">
+          <div class="b-head">Sơ đồ truyền máu</div>
+
+          <figure class="fig">
+            <svg viewBox="0 0 700 390" xmlns="http://www.w3.org/2000/svg" role="img"
+                 aria-label="Sơ đồ truyền máu: O cho được A, B và AB; A cho A và AB; B cho B và AB; AB chỉ cho AB.">
+              <defs>
+                <marker id="tipArrow" viewBox="0 0 10 10" refX="9" refY="5"
+                        markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                  <path d="M0,0 L10,5 L0,10 z" fill="#7A1F4B"/>
+                </marker>
+              </defs>
+
+              <g fill="none" stroke="#7A1F4B" stroke-width="2.4" marker-end="url(#tipArrow)">
+                <!-- O cho A, B, AB -->
+                <line x1="131" y1="163" x2="309" y2="102"/>
+                <line x1="131" y1="187" x2="309" y2="243"/>
+                <line x1="133" y1="175" x2="562" y2="175"/>
+                <!-- A và B cho AB -->
+                <line x1="381" y1="102" x2="564" y2="163"/>
+                <line x1="381" y1="244" x2="564" y2="187"/>
+                <!-- tự cho chính nhóm mình -->
+                <path d="M60,161 C10,130 10,220 60,189"/>
+                <path d="M331,55 C300,5 390,5 359,55"/>
+                <path d="M331,290 C300,340 390,340 359,290"/>
+                <path d="M635,161 C685,130 685,220 635,189"/>
+              </g>
+
+              <g stroke="#7A1F4B" stroke-width="2.4" fill="#FBFCFA">
+                <circle cx="95" cy="175" r="38"/>
+                <circle cx="345" cy="90" r="38"/>
+                <circle cx="345" cy="255" r="38"/>
+                <circle cx="600" cy="175" r="38"/>
+              </g>
+
+              <g text-anchor="middle" fill="#1E2A24">
+                <text x="95" y="172" font-size="26" font-weight="700">O</text>
+                <text x="95" y="194" font-size="13" fill="#7A1F4B">α và β</text>
+
+                <text x="345" y="87" font-size="26" font-weight="700">A</text>
+                <text x="345" y="110" font-size="14" fill="#7A1F4B">β</text>
+
+                <text x="345" y="252" font-size="26" font-weight="700">B</text>
+                <text x="345" y="275" font-size="14" fill="#7A1F4B">α</text>
+
+                <text x="600" y="184" font-size="25" font-weight="700">AB</text>
+                <text x="600" y="235" font-size="13" fill="#7A1F4B">không có α, β</text>
+              </g>
+            </svg>
+            <figcaption>Mũi tên chỉ chiều cho máu. α, β là kháng thể trong huyết tương; vòng cung nhỏ nghĩa là nhóm đó truyền được cho chính nhóm mình.</figcaption>
+          </figure>
+
+          <ul class="leaves">
+            <li><span class="k">O</span> — cho được tất cả, nhưng chỉ nhận của O</li>
+            <li><span class="k">AB</span> — nhận được tất cả, nhưng chỉ cho AB</li>
+          </ul>
+        </div>
+
+        <div class="branch">
+          <div class="b-head">Chú ý khi truyền khác nhóm</div>
+          <ul class="leaves">
+            <li>Không truyền quá <span class="n">250 ml</span></li>
+            <li>Truyền <span class="k">thật chậm</span></li>
+            <li>Phải chú ý thêm <span class="k">nhóm máu Rh</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <p class="tip"><b>Một câu gói cả sơ đồ:</b> O cho được tất cả, AB nhận được tất cả — mũi tên trong sơ đồ luôn chạy từ O ra ngoài và từ ngoài dồn về AB.</p>
+  </section>
+
+  <!-- ================= CÂU 4 ================= -->
+  <section class="q" id="c4" style="--accent:#1D6F7A">
+    <div class="q-head">
+      <span class="q-no">Câu 4</span>
+      <h2>Hiện tượng cơ học của hô hấp</h2>
+    </div>
+
+    <div class="map">
+      <div class="core">HÔ HẤP<br>cơ học</div>
+      <div class="branches">
+
+        <div class="branch">
+          <div class="b-head">Bản chất</div>
+          <ul class="leaves">
+            <li>Động tác thở làm thay đổi <span class="k">thể tích lồng ngực</span> → thay đổi <span class="k">áp suất trong phổi</span> → hút khí vào, thải khí ra</li>
+            <li>Nhờ <span class="k">các cơ hô hấp</span>, đặc biệt là <span class="k">cơ hoành</span></li>
+            <li>Nhờ <span class="k">áp lực âm tính</span> của khoang màng phổi giúp hai lá màng phổi luôn dính sát nhau</li>
+          </ul>
+        </div>
+
+        <div class="branch">
+          <div class="b-head">Động tác thở</div>
+          <ul class="leaves">
+            <li><span class="k">Thở vào</span>
+              <ul class="sub">
+                <li>Cơ hô hấp <span class="k">co</span>, cơ hoành <span class="k">hạ xuống</span></li>
+                <li>Lồng ngực nở ra <span class="n">3</span> chiều: ngang – dọc – trước sau</li>
+                <li>Thể tích phổi tăng → áp suất trong phổi <span class="k">thấp hơn</span> bên ngoài → khí bị hút vào</li>
+              </ul>
+            </li>
+            <li><span class="k">Thở ra</span>
+              <ul class="sub">
+                <li>Cơ hô hấp <span class="k">giãn</span>, cơ hoành <span class="k">nâng lên</span></li>
+                <li>Lồng ngực trở lại vị trí ban đầu, thể tích phổi giảm</li>
+                <li>Áp suất trong phổi <span class="k">cao hơn</span> bên ngoài → khí bị đẩy ra</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="branch">
+          <div class="b-head">Nhịp thở</div>
+          <ul class="leaves">
+            <li>Một chu kỳ = <span class="k">1 lần hít vào + 1 lần thở ra</span></li>
+            <li>1 nhịp thở tương ứng <span class="n">4</span> nhịp tim</li>
+            <li>Giảm khi ngủ; tăng khi lao động, gắng sức; bệnh lý có thể nhanh, chậm hoặc rối loạn</li>
+          </ul>
+        </div>
+
+        <div class="branch">
+          <div class="b-head">Tần số thở</div>
+          <ul class="leaves">
+            <li>Người lớn <span class="n">16 – 20</span> lần/phút · trẻ em <span class="n">25 – 30</span> lần/phút</li>
+            <li>Ngưỡng viêm phổi
+              <ul class="sub">
+                <li>Dưới 2 tháng: trên <span class="n">60</span> nhịp/phút</li>
+                <li>2 – 12 tháng: trên <span class="n">50</span> nhịp/phút</li>
+                <li>1 – 5 tuổi: trên <span class="n">40</span> nhịp/phút</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="branch">
+          <div class="b-head">Dung lượng phổi <span class="n">4,5 – 5 lít</span></div>
+          <ul class="leaves">
+            <li><span class="k">Dung tích sống</span> ≈ <span class="n">3,5 lít</span>
+              <ul class="sub">
+                <li>Khí lưu thông <span class="n">0,5 L</span> — một lần thở bình thường</li>
+                <li>Dự trữ hít vào <span class="n">1,5 L</span> — hít vào gắng sức</li>
+                <li>Dự trữ thở ra <span class="n">1,5 L</span> — thở ra hết sức</li>
+                <li>Thay đổi theo: tuổi, giới, sức khoẻ, rèn luyện, tư thế</li>
+              </ul>
+            </li>
+            <li><span class="k">Thể tích khí cặn</span> <span class="n">1 – 1,5 lít</span> — còn lại sau khi thở ra hết sức</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <p class="tip"><b>Hai chuỗi số phải thuộc lòng:</b> ngưỡng viêm phổi tụt dần 60 – 50 – 40 theo tuổi lớn dần; thể tích phổi cộng lại 0,5 + 1,5 + 1,5 = 3,5.</p>
+  </section>
+
+  <!-- ================= CÂU 5 ================= -->
+  <section class="q" id="c5" style="--accent:#C0741B">
+    <div class="q-head">
+      <span class="q-no">Câu 5</span>
+      <h2>Vị trí và hình thể ngoài của dạ dày</h2>
+    </div>
+
+    <div class="map">
+      <div class="core">DẠ DÀY</div>
+      <div class="branches">
+
+        <div class="branch">
+          <div class="b-head">Vị trí</div>
+          <ul class="leaves">
+            <li>Nơi <span class="k">phình to</span> của ống tiêu hoá: trên nối thực quản, dưới nối tá tràng</li>
+            <li>Dài <span class="n">25 – 30 cm</span>, rộng <span class="n">10 – 15 cm</span>, chứa <span class="n">1 – 2 lít</span> thức ăn</li>
+            <li>Nằm trong ổ bụng, dưới <span class="k">cơ hoành bên trái</span>, hơi lấn sang phải</li>
+            <li>Chiếu lên thành bụng ở <span class="k">vùng thượng vị</span> (mỏ ác)</li>
+          </ul>
+        </div>
+
+        <div class="branch">
+          <div class="b-head">Hình thể ngoài — hình chữ J</div>
+          <ul class="leaves">
+            <li><span class="k">Phần đứng</span>: phình vị – thân vị – đáy vị</li>
+            <li><span class="k">Phần nằm</span>: hang vị – môn vị</li>
+            <li>Có <span class="n">2</span> mặt, <span class="n">2</span> bờ, <span class="n">2</span> lỗ</li>
+          </ul>
+        </div>
+
+        <div class="branch">
+          <div class="b-head">Liên quan</div>
+          <ul class="leaves">
+            <li><span class="k">Hai mặt</span>
+              <ul class="sub">
+                <li>Mặt trước: gan, cơ hoành, thành bụng trước</li>
+                <li>Mặt sau: tá tràng, tuỵ, tỳ, tuyến thượng thận trái, thận trái</li>
+              </ul>
+            </li>
+            <li><span class="k">Hai bờ</span>
+              <ul class="sub">
+                <li>Bờ cong nhỏ: có mạc nối nhỏ</li>
+                <li>Bờ cong lớn: có mạc nối lớn</li>
+                <li>Sát hai bờ cong có cung động mạch tương ứng</li>
+              </ul>
+            </li>
+            <li><span class="k">Hai lỗ</span>
+              <ul class="sub">
+                <li>Lỗ tâm vị ở trên — thông với thực quản</li>
+                <li>Lỗ môn vị ở dưới — thông với tá tràng</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <p class="tip"><b>Mẹo:</b> dạ dày là cơ quan “toàn số 2” — 2 mặt, 2 bờ, 2 lỗ; bờ nhỏ đi với mạc nối nhỏ, bờ lớn đi với mạc nối lớn. Mặt sau toàn chữ T: tá tràng – tuỵ – tỳ – thượng thận trái – thận trái.</p>
+  </section>
+
+  <!-- ================= CÂU 6 ================= -->
+  <section class="q" id="c6" style="--accent:#4B6B2A">
+    <div class="q-head">
+      <span class="q-no">Câu 6</span>
+      <h2>Chức năng của thận</h2>
+    </div>
+
+    <div class="map">
+      <div class="core">THẬN</div>
+      <div class="branches">
+
+        <div class="branch">
+          <div class="b-head">Bài tiết chất độc và chất cặn bã</div>
+          <ul class="leaves">
+            <li>Đào thải theo nước tiểu các chất cặn bã do chuyển hoá <span class="k">protit</span>: ure, acid uric, creatinin</li>
+            <li><span class="k">Acid lactic</span> do hoạt động của cơ thể sinh ra</li>
+          </ul>
+        </div>
+
+        <div class="branch">
+          <div class="b-head">Chức năng tổng hợp</div>
+          <ul class="leaves">
+            <li>Sản sinh <span class="k">amoniac</span> (có tính kiềm) → tham gia điều hoà <span class="k">pH của máu</span></li>
+          </ul>
+        </div>
+
+        <div class="branch">
+          <div class="b-head">Điều hoà các thành phần của máu</div>
+          <ul class="leaves">
+            <li><span class="k">Điều hoà nước</span>
+              <ul class="sub">
+                <li>Uống nhiều nước → nước trong máu tăng → thận tăng đào thải → đi tiểu nhiều</li>
+              </ul>
+            </li>
+            <li><span class="k">Điều hoà NaCl</span>
+              <ul class="sub">
+                <li>NaCl trong máu tăng → thận tăng đào thải NaCl</li>
+                <li>NaCl giữ vai trò quan trọng trong điều hoà <span class="k">áp lực thẩm thấu</span></li>
+                <li>Viêm thận → thải NaCl kém → muối và nước ứ đọng trong mô → <span class="k">phù</span> → phải ăn nhạt</li>
+              </ul>
+            </li>
+            <li><span class="k">Điều hoà pH</span>
+              <ul class="sub">
+                <li>pH nước tiểu thay đổi từ <span class="n">4,2</span> (acid) đến <span class="n">8,2</span> (kiềm), trung bình <span class="n">6</span></li>
+                <li>pH máu <span class="k">giảm</span> (tăng acid) → tăng thải phosphat <span class="n">1</span> kiềm</li>
+                <li>pH máu <span class="k">tăng</span> → tăng thải phosphat <span class="n">2</span> kiềm</li>
+              </ul>
+            </li>
+            <li><span class="k">Điều hoà huyết áp</span>
+              <ul class="sub">
+                <li>Thận sản xuất <span class="k">renin</span> gây tăng huyết áp — cơ chế tự động bảo đảm đủ khối lượng máu vào thận</li>
+                <li>Bệnh thận mạn tính → máu vào thận ít → tăng huyết áp</li>
+              </ul>
+            </li>
+            <li><span class="k">Kích thích tạo máu</span>
+              <ul class="sub">
+                <li>Thận sản xuất <span class="k">Erythropoietin</span> → kích thích tuỷ xương sản xuất hồng cầu</li>
+                <li>Suy thận → giảm Erythropoietin → <span class="k">thiếu máu</span></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <p class="tip"><b>Khung ba nhánh:</b> thải – tổng hợp – điều hoà. Riêng nhánh điều hoà có năm mục theo thứ tự nước → muối → pH → huyết áp → tạo máu, và hai hormon đi kèm: renin lo huyết áp, erythropoietin lo hồng cầu.</p>
+  </section>
+
+  <!-- ================= CÂU 7 ================= -->
+  <section class="q" id="c7" style="--accent:#6B3F8C">
+    <div class="q-head">
+      <span class="q-no">Câu 7</span>
+      <h2>Giải phẫu buồng trứng và chức năng nội tiết</h2>
+    </div>
+
+    <div class="map">
+      <div class="core">BUỒNG<br>TRỨNG</div>
+      <div class="branches">
+
+        <div class="branch">
+          <div class="b-head">Vị trí</div>
+          <ul class="leaves">
+            <li>Nằm sát <span class="k">thành sau chậu hông bé</span></li>
+            <li>Dưới eo trên khoảng <span class="n">10 mm</span>, tương ứng <span class="k">vùng hố chậu</span></li>
+          </ul>
+        </div>
+
+        <div class="branch">
+          <div class="b-head">Hình thể ngoài</div>
+          <ul class="leaves">
+            <li>Có <span class="n">2</span> buồng trứng, hình <span class="k">hạt thị hơi dẹt</span></li>
+            <li>Dài <span class="n">3 – 4 cm</span>, rộng <span class="n">2 cm</span>, nặng <span class="n">5 – 6 g</span></li>
+            <li>Màu hồng; khi có kinh nguyệt chuyển <span class="k">đỏ sẫm</span></li>
+          </ul>
+        </div>
+
+        <div class="branch">
+          <div class="b-head">Phương tiện cố định — <span class="n">4</span></div>
+          <ul class="leaves">
+            <li>Mạc treo buồng trứng</li>
+            <li>Dây chằng thắt lưng – buồng trứng</li>
+            <li>Dây chằng tử cung – buồng trứng</li>
+            <li>Dây chằng vòi trứng</li>
+          </ul>
+        </div>
+
+        <div class="branch">
+          <div class="b-head">Cấu tạo — <span class="n">2</span> lớp</div>
+          <ul class="leaves">
+            <li><span class="k">Lớp ngoài</span>: chứa các nang trứng
+              <ul class="sub">
+                <li>Khoảng <span class="n">300.000 – 400.000</span> bọc nguyên thuỷ ở hai buồng trứng</li>
+                <li>Đến tuổi dậy thì còn <span class="n">300 – 400</span> noãn bào trưởng thành = nang <span class="k">De Graaf</span></li>
+              </ul>
+            </li>
+            <li><span class="k">Lớp trong</span>: mô liên kết chứa mạch máu và thần kinh</li>
+          </ul>
+        </div>
+
+        <div class="branch">
+          <div class="b-head">Mạch máu – thần kinh</div>
+          <ul class="leaves">
+            <li>Động mạch: nhánh của <span class="k">động mạch buồng trứng</span> và <span class="k">động mạch tử cung</span></li>
+            <li>Thần kinh: nhánh từ <span class="k">đám rối liên mạc treo</span> và <span class="k">đám rối thận</span></li>
+          </ul>
+        </div>
+
+        <div class="branch">
+          <div class="b-head">Chức năng nội tiết</div>
+          <ul class="leaves">
+            <li><span class="k">Estrogen</span> (Foliculin) — do lớp áo trong của nang trứng tiết ra
+              <ul class="sub">
+                <li>Kích thích phát triển bộ phận sinh dục</li>
+                <li>Phát triển tử cung và niêm mạc tử cung</li>
+                <li>Phát triển tuyến vú và giới tính</li>
+              </ul>
+            </li>
+            <li><span class="k">Progesteron</span> — hoàng thể tiết ra ở nửa cuối kỳ kinh nguyệt
+              <ul class="sub">
+                <li>Làm tử cung mềm mại, giảm co bóp trong lúc có thai</li>
+                <li>Giúp trứng phát triển, thụ thai và làm tổ</li>
+                <li>Làm các khớp và khung xương chậu giãn ra khi sinh</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <p class="tip"><b>Mẹo phân biệt hai hormon:</b> Estrogen lo phần “xây dựng” — làm cơ thể và bộ phận sinh dục phát triển; Progesteron lo phần “giữ” — giữ thai yên, mềm tử cung, mở khung chậu lúc sinh.</p>
+  </section>
+
+</div>
+</body>
+</html>
